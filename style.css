@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&family=Poppins:wght@400;500;600&display=swap');
+/*=============================================
+=            color            =
+=============================================*/
+:root {
+    --color-1th: hsl(257, 40%, 49%);
+    --color-2th: hsl(300, 69%, 71%);
+    --color-white: #fff;
+}
+/*=====  End of color  ======*/
+
+
+/*=============================================
+=            General            =
+=============================================*/
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /*font-family: 'Poppins', Courier, monospace;*/
+}
+body
+{
+    background: url(images/bg-desktop.svg), var(--color-1th);
+    background-repeat: no-repeat;
+    background-size:cover;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-between;
+    min-height: 100vh;
+}
+/*=====  End of General  ======*/
+
+/*=============================================
+=            Header and Footer            =
+=============================================*/
+header 
+{
+    grid-area: 1 / 1 / 2 / 3; 
+    align-self: flex-start;
+}
+/*=====  End of Header and Footer  ======*/
+
+
+/*=============================================
+=            Main            =
+=============================================*/
+.huddle-page-intro 
+{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-column-gap: 45px;
+    grid-row-gap: 30px;
+    max-width: 1440px;
+    padding: 80px;
+    padding-bottom: 0px;
+}   
+.huddle-page-intro_illustration 
+{ 
+    margin-top: 40px;
+    grid-area: 2 / 1 / 4 / 2;
+    max-width: 705px;
+}
+
+.huddle-page-intro_section-community 
+{ 
+    color: var(--color-white);
+    grid-area: 2 / 2 / 4 / 3; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 90px;
+    gap: 25px;
+}
+.huddle-page-intro_heading
+{
+    font-size: 40px;
+    line-height: 150%;
+    font-family: 'Poppins', Courier, monospace;
+}
+.huddle-page-intro_paragraph
+{
+    line-height: 170%;
+    font-family: 'Open Sans', Courier, monospace;
+    font-weight: 300;
+}
+.huddle-page-intro_btn-register 
+{
+	background-color:var(--color-white);
+	border-radius:28px;
+	display:inline-block;
+	cursor:pointer;
+	color:var(--color-1th);
+    border: 0;
+	font-size:18px;
+	padding:17px 65px;
+    box-shadow: 0px 10px 14px -7px rgba(44, 44, 44, 0.342);
+    transition: all 0.5s;
+    font-weight: 400;
+}
+.huddle-page-intro_btn-register:hover 
+{
+	background-color:var(--color-2th);
+    color: var(--color-white);
+}
+.huddle-page-intro_section-social
+{
+    grid-area: 4 / 1 / 5 / 3;
+    display: flex;
+    flex-direction: row;
+    gap : 10px;
+    justify-self: end;
+}
+.huddle-page-intro_section-social i
+{
+    border: 1px solid var(--color-white);
+    color: var(--color-white);
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 100%;
+    cursor: pointer;
+    transition: all 0.5s;
+}  
+.huddle-page-intro_section-social i:hover
+{
+    border: 1px solid var(--color-2th);
+    color: var(--color-2th);
+}
+.huddle-page-intro_section-social .fa-facebook-f
+{
+    padding: 10px 14px;
+}
+.huddle-page-intro_section-social .fa-instagram
+{
+    padding: 10px 11px;
+}
+/*=====  End of Main  ======*/
+
+
+/*=============================================
+=            Responsive            =
+=============================================*/
+@media all and (min-width: 0px) and (max-width: 1280px)
+{
+    body
+    {
+        background: url(images/bg-mobile.svg), var(--color-1th);
+        background-repeat: no-repeat;
+        background-size:cover;
+    }
+    .huddle-page-intro_section-community
+    {  
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .huddle-page-intro{
+        display: flex;
+        flex-direction: column;  
+        padding: 50px;
+        align-items: center; 
+    }
+    .huddle-page-intro_illustration
+    {
+        width: 100%; height: auto;
+    }
+   header
+   {
+    display: none;
+   }
+   footer
+   {
+    display: none
+   }
+    
+}
+/*=====  End of Responsive  ======*/
+
+
+
